@@ -1,7 +1,7 @@
 import * as actionType from 'actions/story/actionType';
 
 const initialState = {
-  stories: [],
+  stories: []
 };
 
 export default (state = initialState, { type, payload = {} }) => {

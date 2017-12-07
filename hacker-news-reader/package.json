@@ -36,9 +36,10 @@
     "react-dev-utils": "^4.2.1",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "style-loader": "0.19.0",
     "styled-components": "^2.2.4",
@@ -121,12 +122,20 @@
       "expose": "containers"
     },
     {
+      "source": "./views",
+      "expose": "views"
+    },
+    {
       "source": "./views/pages",
       "expose": "pages"
     },
     {
+      "source": "./store",
+      "expose": "store"
+    },
+    {
       "source": "./store/reducer",
-      "expose": "reducers"
+      "expose": "reducer"
     },
     {
       "source": "./store/actions",
@@ -135,6 +144,10 @@
     {
       "source": "./store/middleware",
       "expose": "middleware"
+    },
+    {
+      "source": "./routes",
+      "expose": "routes"
     },
     {
       "source": "./styles",

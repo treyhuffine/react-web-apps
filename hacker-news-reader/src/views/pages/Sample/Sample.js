@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import logo from 'images/logo.svg';
-import {App, Logo, Header, Intro} from './styles';
+import { App, Logo, Header, Intro } from './styles';
 
 class Main extends Component {
   render() {
     return (
       <App>
         <Header>
-          <Logo src={logo} className="App-logo" alt="logo"/>
+          <Logo src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </Header>
         <Intro>

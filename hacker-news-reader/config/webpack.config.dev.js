@@ -115,7 +115,7 @@ const config = {
             options: {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
-              
+
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -144,7 +144,7 @@ const config = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              
+
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -260,7 +260,5 @@ const config = {
     hints: false,
   },
 };
-setTimeout(() => {
-  console.log('CONFIG', config.resolve.alias);
-}, 5000)
+
 module.exports = config;

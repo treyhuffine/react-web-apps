@@ -22,5 +22,5 @@ export const Header = styled.div`
 `;
 
 export const Intro = styled.p`
-    font-size: large;
+  font-size: large;
 `;
