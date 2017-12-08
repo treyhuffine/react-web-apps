@@ -134,8 +134,12 @@
       "expose": "store"
     },
     {
-      "source": "./store/reducer",
-      "expose": "reducer"
+      "source": "./store/api",
+      "expose": "api"
+    },
+    {
+      "source": "./store/reducers",
+      "expose": "reducers"
     },
     {
       "source": "./store/actions",

@@ -5,18 +5,15 @@ const TOP_STORIES = 'topstories.json';
 const ITEM = 'item';
 const QUERY = 'print=pretty';
 
-const getStories = () => {
-  axios.get(`${HACKER_NEWS}/${TOP_STORIES}?${QUERY}`)
-    .then((res) => {
-      return res.data
-    });
-};
+export const fetchStoryList = () =>
+  axios.get(`${HACKER_NEWS}/${TOP_STORIES}?${QUERY}`).then(res => {
+    return res.data;
+  });
 
-const getItem = id => {
+export const fetchItem = id => {
   const item = `${id}.json`;
-  
-  axios.get(`${HACKER_NEWS}/${ITEM}/${item}?${QUERY}`)
-    .then((res) => {
-      return res.data
-    });
+
+  return axios.get(`${HACKER_NEWS}/${ITEM}/${item}?${QUERY}`).then(res => {
+    return res.data;
+  });
 };

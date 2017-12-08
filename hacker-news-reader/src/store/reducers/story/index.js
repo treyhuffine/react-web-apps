@@ -6,8 +6,11 @@ const initialState = {
 
 export default (state = initialState, { type, payload = {} }) => {
   switch (type) {
-    case actionType.FETCH_STORY_LIST:
-      return state;
+    case actionType.FETCH_STORY_LIST_SUCCESS:
+      return {
+        ...state,
+        stories: payload.storyList
+      };
     default:
       return state;
   }
