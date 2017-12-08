@@ -1,12 +1,10 @@
-import * as actionType from 'actions/story/actionType';
+import * as actionType from 'actions/auth/actionType';
 
-const initialState = {
-  stories: []
-};
+const initialState = {};
 
 export default (state = initialState, { type, payload = {} }) => {
   switch (type) {
-    case actionType.FETCH_STORY_LIST:
+    case actionType.LOGIN:
       return state;
     default:
       return state;

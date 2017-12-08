@@ -1,9 +1,9 @@
 const injectedState = window.__INJECTED_STATE__ || {};
-const authedUser = window.__AUTHED_USER__ || {};
+const auth = window.__AUTH__ || {};
 
 const initialState = {
   ...injectedState,
-  authedUser
+  auth,
 };
 
 export default initialState;
