@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchStoryList: () => {
-    dispatch(actions.fetchStoryList());
+  fetchTopStories: () => {
+    dispatch(actions.fetchTopStories());
   }
 });
 

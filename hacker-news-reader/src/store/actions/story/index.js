@@ -1,28 +1,51 @@
 import actionCreator from 'actions/actionCreator';
-import * as actionType from './actionType';
-import * as api from 'api/story';
+import * as hackerNews from 'services/hackerNews';
+import * as actionTypes from './actionTypes';
 
-const fetchStoryListRequest = actionCreator(
-  actionType.FETCH_STORY_LIST_REQUEST
-);
-const fetchStoryListSuccess = actionCreator(
-  actionType.FETCH_STORY_LIST_SUCCESS
-);
-const fetchStoryListFailure = actionCreator(
-  actionType.FETCH_STORY_LIST_FAILURE
-);
+const fetchStoriesRequest = actionCreator(actionTypes.FETCH_STORIES_REQUEST);
+const fetchStoriesSuccess = actionCreator(actionTypes.FETCH_STORIES_SUCCESS);
+const fetchStoriesFailure = actionCreator(actionTypes.FETCH_STORIES_FAILURE);
 
-export const fetchStoryList = payload => {
+export const fetchStories = ({ storyIds }) => {
   return dispatch => {
-    dispatch(fetchStoryListRequest());
+    dispatch(fetchStoriesRequest());
 
-    return api
-      .fetchStoryList()
-      .then(storyList => {
-        dispatch(fetchStoryListSuccess({ storyList }));
+    return hackerNews
+      .fetchStories(storyIds)
+      .then(stories => {
+        dispatch(fetchStoriesSuccess({ stories }));
       })
       .catch(err => {
-        dispatch(fetchStoryListFailure({ err }));
+        dispatch(fetchStoriesFailure({ err }));
+      });
+  };
+};
+
+const fetchTopStoryIdsRequest = actionCreator(
+  actionTypes.FETCH_TOP_STORIES_REQUEST
+);
+const fetchTopStoryIdsSuccess = actionCreator(
+  actionTypes.FETCH_TOP_STORIES_SUCCESS
+);
+const fetchTopStoryIdsFailure = actionCreator(
+  actionTypes.FETCH_TOP_STORIES_FAILURE
+);
+
+export const fetchTopStories = payload => {
+  return dispatch => {
+    dispatch(fetchTopStoryIdsRequest());
+
+    return hackerNews
+      .fetchTopStoryIds()
+      .then(storyIds => {
+        dispatch(fetchTopStoryIdsSuccess({ storyIds }));
+        return storyIds;
+      })
+      .catch(err => {
+        dispatch(fetchTopStoryIdsFailure({ err }));
+      })
+      .then(storyIds => {
+        dispatch(fetchStories({ storyIds }));
       });
   };
 };

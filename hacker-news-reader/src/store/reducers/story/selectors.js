@@ -1,1 +1,1 @@
-export const storyListSelector = state => state.story.stories;
+export const storyListSelector = state => state.story.storyIds;

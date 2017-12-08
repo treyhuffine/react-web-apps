@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Feed extends Component {
   componentDidMount() {
-    this.props.fetchStoryList();
+    this.props.fetchTopStories();
   }
 
   render() {
@@ -10,15 +10,7 @@ class Feed extends Component {
     return (
       <div>
         <div>HI</div>
-        <div>
-          {
-            this.props.storyList.map((id) => (
-              <div>
-                {id}
-              </div>
-            ))
-          }
-        </div>
+        <div>{this.props.storyList.map(id => <div>{id}</div>)}</div>
       </div>
     );
   }

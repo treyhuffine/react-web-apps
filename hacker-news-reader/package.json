@@ -130,12 +130,12 @@
       "expose": "pages"
     },
     {
-      "source": "./store",
-      "expose": "store"
+      "source": "./services",
+      "expose": "services"
     },
     {
-      "source": "./store/api",
-      "expose": "api"
+      "source": "./store",
+      "expose": "store"
     },
     {
       "source": "./store/reducers",

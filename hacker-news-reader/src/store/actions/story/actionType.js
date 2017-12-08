@@ -1,5 +1,0 @@
-const ns = '@app';
-export const FETCH_STORY_LIST = `${ns}/FETCH_STORY_LIST`;
-export const FETCH_STORY_LIST_REQUEST = `${ns}/FETCH_STORY_LIST_REQUEST`;
-export const FETCH_STORY_LIST_SUCCESS = `${ns}/FETCH_STORY_LIST_SUCCESS`;
-export const FETCH_STORY_LIST_FAILURE = `${ns}/FETCH_STORY_LIST_FAILURE`;

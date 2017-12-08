@@ -1,10 +1,10 @@
-import * as actionType from 'actions/auth/actionType';
+import * as actionTypes from 'actions/auth/actionTypes';
 
 const initialState = {};
 
 export default (state = initialState, { type, payload = {} }) => {
   switch (type) {
-    case actionType.LOGIN:
+    case actionTypes.LOGIN:
       return state;
     default:
       return state;
