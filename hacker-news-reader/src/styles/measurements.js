@@ -5,3 +5,7 @@ export const width = {
 export const height = {
   nav: '3rem'
 };
+
+export const spacing = {
+  base: '1em'
+};

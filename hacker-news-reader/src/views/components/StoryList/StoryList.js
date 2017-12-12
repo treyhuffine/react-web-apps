@@ -1,13 +1,15 @@
 import React from 'react';
 import Story from 'components/Story';
 
-import { List } from './styles';
+import { List, Container } from './styles';
 
 const StoryList = ({ stories }) => (
   <List>
-    {stories.map((story, index) => (
-      <Story story={story} key={story.id} index={index + 1} />
-    ))}
+    <Container>
+      {stories.map((story, index) => (
+        <Story story={story} key={story.id} index={index + 1} />
+      ))}
+    </Container>
   </List>
 );
 

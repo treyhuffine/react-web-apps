@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "moment": "^2.19.4",
     "reselect": "^3.0.1"
   }
 }
