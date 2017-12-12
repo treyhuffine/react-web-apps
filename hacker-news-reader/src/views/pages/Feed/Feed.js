@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import Page from 'pages/Page';
+import StoryList from 'containers/StoryList';
+
+import { Container } from './styles';
+
+const PAGE_NAME = 'feed';
 
 class Feed extends Component {
   componentDidMount() {
@@ -6,12 +12,12 @@ class Feed extends Component {
   }
 
   render() {
-    console.log('PROP', this.props);
     return (
-      <div>
-        <div>HI</div>
-        <div>{this.props.storyList.map(id => <div>{id}</div>)}</div>
-      </div>
+      <Page pageName={PAGE_NAME}>
+        <Container>
+          <StoryList />
+        </Container>
+      </Page>
     );
   }
 }

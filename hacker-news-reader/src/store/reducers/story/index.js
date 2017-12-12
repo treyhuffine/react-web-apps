@@ -1,17 +1,16 @@
 import * as actionTypes from 'actions/story/actionTypes';
 
 const initialState = {
-  storyIds: [],
   stories: [],
   isFetching: false
 };
 
-export default (state = initialState, { type, payload = {} }) => {
+export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.FETCH_TOP_STORIES_SUCCESS:
+    case actionTypes.FETCH_STORIES_SUCCESS:
       return {
         ...state,
-        storyIds: payload.storyIds
+        stories: payload.stories
       };
     default:
       return state;

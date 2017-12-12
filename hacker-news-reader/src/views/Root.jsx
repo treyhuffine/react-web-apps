@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from 'routes/index';
 
+import 'styles/global.css';
+
 class Root extends Component {
   static propTypes = {
     store: PropTypes.object.isRequired

@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Navbar from 'components/Navbar';
 
-class Main extends Component {
-  render() {
-    return <div>{this.props.children}</div>;
-  }
-}
+const Page = ({ pageName, children }) => (
+  <div className={pageName}>
+    <Navbar />
+    {children}
+  </div>
+);
 
-export default Main;
+Page.defaultProps = {
+  pageName: ''
+};
+
+Page.propTypes = {
+  pageName: PropTypes.string
+};
+
+export default Page;
